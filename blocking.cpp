@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-void blocckingMatMul(const vector<vector<int>> &mat1, const vector<vector<int>> &mat2, vector<vector<int>> &ans, int blockSize) {
+void blockingMatMul(const vector<vector<int>> &mat1, const vector<vector<int>> &mat2, vector<vector<int>> &ans, int blockSize) {
     int row1 = mat1.size();
     int col1 = mat1[0].size();
     int row2 = mat2.size();

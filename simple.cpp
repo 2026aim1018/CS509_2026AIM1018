@@ -3,7 +3,7 @@
 #include <chrono>
 using namespace std;
 
-void simpleMatMul(vector<vector<int>> &mat1, vector<vector<int>> &mat2, vector<vector<int>> &ans){
+void simpleMatMul(const vector<vector<int>> &mat1,const vector<vector<int>> &mat2, vector<vector<int>> &ans){
 
     if(mat1.empty() || mat2.empty() || mat1.size() != mat2[0].size()){
         cout<<"Error: Invalid dimensions for matrix multiplication." << endl;
