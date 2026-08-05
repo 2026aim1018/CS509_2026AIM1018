@@ -141,11 +141,11 @@ int main(int argc, char* argv[]) {
         
         auto endCSR = chrono::high_resolution_clock::now();
         
-        auto timeCSR = chrono::duration_cast<chrono::microseconds>(endCSR - startCSR).count();
+        auto timeCSR = chrono::duration_cast<chrono::milliseconds>(endCSR - startCSR).count();
 
         cout << "Success: Graph successfully loaded and compressed into CSR format!\n";
         cout << "Vertices: " << V << " | Edges: " << E << "\n";
-        cout << "Conversion Time: " << timeCSR << " microseconds\n\n";
+        cout << "Conversion Time: " << timeCSR << " milliseconds\n\n";
     }
     
     else {
