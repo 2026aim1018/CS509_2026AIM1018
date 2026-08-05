@@ -1,8 +1,6 @@
 # CS509 - Assignment 1 (2026AIM1018)
 **Task Type:** Single Task (GEMM & CSR) and Buddy Tasks (BFS, DFS, SSSP)
 
-## Required README Result Tables
-
 ### GEMM Results Table
 
 | Test File | Input Type / Size | Simple Time | Blocking Time | Block Size | Status |
