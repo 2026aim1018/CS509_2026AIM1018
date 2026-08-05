@@ -7,8 +7,8 @@
 
 | Test File | Input Type / Size | Simple Time | Blocking Time | Block Size | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `gemm_test_100.txt` | 100 x 100 | 9 ms | 12 ms | 2 | Pass |
-| `gemm_test_500.txt` | 500 x 500 | 734 ms | 1102 ms | 2 | Pass |
+| `gemm_test_100.txt` | 100 x 100 | 9 ms | 12 ms | 32 | Pass |
+| `gemm_test_500.txt` | 500 x 500 | 734 ms | 1102 ms | 32 | Pass |
 
 ### CSR Preprocessing Timing Log 
 
