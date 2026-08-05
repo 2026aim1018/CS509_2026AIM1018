@@ -3,7 +3,7 @@
 #include <vector>
 #include <chrono>
 #include "gemm.h"
-#include "csr.h"
+
 
 using namespace std;
 
@@ -14,47 +14,6 @@ void printMat(const vector<vector<int>> &mat){
         }
         cout<<"\n";
     }
-}
-
-void readAndConvertToCSR(string fileName){
-    ifstream inputFile(fileName);
-
-    if(!inputFile.is_open()){
-        cout<<"Error: Could not open file"<<fileName<<endl;
-        return;
-    }
-
-    int V, E, isWeighted;
-
-    if(!(inputFile>>V>>E>>isWeighted)){
-        cout<<"Error: Invalid or empty file."<<endl;
-        return;
-    }
-
-    if(isWeighted==0){
-        vector<vector<int>> adjList(V);
-        for(int i=0; i<E; i++){
-            int u, v;
-            inputFile>>u>>v;
-            adjList[u].push_back(v);
-        }
-
-        vector<int> rowPtr, colIdx;
-        convertToCSR_Unweighted(adjList, rowPtr, colIdx);
-    }
-    else{
-        vector<vector<pair<int, int>>> adjList(V);
-        
-        for(int i=0; i<E; i++){
-            int u, v, weight;
-            inputFile>>u >> v >> weight;
-            adjList[u].push_back(make_pair(v, weight));
-        }
-
-        vector<int> rowPtr, colIdx, weights;
-        convertToCSR_Weighted(adjList, rowPtr, colIdx, weights);
-    }
-    inputFile.close();
 }
 
 int main(int argc, char* argv[]){
