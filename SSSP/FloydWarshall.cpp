@@ -21,7 +21,7 @@ void funcFloydWarshall(int V, vector<vector<int>> &dist, bool &hasNegCycle) {
 
     for (int i = 0; i < V; i++) {
         if (dist[i][i] < 0) {
-            hasNegCycle = true;
+            hasNegCycle =  true;
             return;
         }
     }

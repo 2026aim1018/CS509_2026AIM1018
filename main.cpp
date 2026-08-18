@@ -16,7 +16,7 @@ void printMat(const vector<vector<int>> &mat){
         for(int j=0; j<mat[0].size(); j++){
             cout << mat[i][j] << " ";
         }
-        cout << "\n";
+        cout << " \n";
     }
 }
 
