@@ -2,15 +2,10 @@
 #define PRIMS_H
 
 #include<vector>
+#include "MSTEdge.h"
 using namespace std;
 
-struct MSTEdge{
-    int sourceNode;
-    int destNode;
-    int weight;
-};
-
-long long primsAlgoFunc(int V, const vector<int> &rowPtr, const vector<int> &colIdx, const vector<int> &weights, const vector<MSTEdge> &mstEdges);
+long long primsAlgoFunc(int V, const vector<int> &rowPtr, const vector<int> &colIdx, const vector<int> &weights, vector<MSTEdge> &mstEdges);
 
 #endif
 

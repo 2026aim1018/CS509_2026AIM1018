@@ -14,7 +14,7 @@ struct EdgeToProcess{
     }
 };
 
-long long primsAlgofunc(int V, const vector<int> &rowPtr,const vector<int> &colIdx, const vector<int> &weights, vector<MSTEdge> &mstEdges){
+long long primsAlgoFunc(int V, const vector<int> &rowPtr,const vector<int> &colIdx, const vector<int> &weights, vector<MSTEdge> &mstEdges){
     long long totalTreeWeight = 0;
 
     vector<bool> isNodeInTree(V, false);
@@ -39,6 +39,9 @@ long long primsAlgofunc(int V, const vector<int> &rowPtr,const vector<int> &colI
         if(isNodeInTree[v] == true){
             continue;
         }
+        mstEdges.push_back({u, v, currWeight});
+        totalTreeWeight += currWeight;
+        isNodeInTree[v] = true; 
 
         for(int i=rowPtr[v]; i<rowPtr[v+1]; i++){
             int nxtNode = colIdx[i];
